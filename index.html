@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kevin Jiang · Mechatronics, Robotics, Embedded Systems & Controls</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Correct Font Awesome bundle -->
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/all.min.css">
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="Images/logo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>   
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="projects.html">PROJECTS</a></li>
+                    <!-- <li><a href="">MISC</a></li> -->
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1>Robotics, Controls, Embedded Systems & More</h1>
+            <p>"There's nothing that cannot be done, only things that have not been thought of yet."</p>
+            <a href="#kevin" class="hero-btn">LEARN MORE</a>
+        </div>
+    </section>
+    <!-- Photo and blurb -->
+
+
+    <!-- About Me -->
+    <section class="aboutme">
+        <h1>About Me</h1>
+         <section id="kevin" class="intro">
+    <figure class="intro__media">
+        <img src="Images/kevin.png" alt="Portrait of Kevin Jiang">
+    </figure>
+
+    <div class="intro__body">
+        <h2>Hi, I'm Kevin Jiang</h2>
+        <p class="lead">
+        M.S. ECE (Robotics) at UCSC. I design and build end-to-end mechatronic systems—controls,
+        embedded firmware, and manufacturable hardware. Recent work includes a soft-robotic finger
+        with PID/ARMAX control, a PyBullet UAV sim, and custom PCBs for a bioelectronic bandage.
+        I love turning rough ideas into reliable prototypes and helping teams ship.
+        </p>
+
+        <div class="intro__actions">
+        <a class="btn" href="Kevin_Jiang_Resume.pdf">Download Résumé</a>
+        <a class="btn btn--ghost" href="#contact">Contact</a>
+        </div>
+    </div>
+    </section>
+        <div class="row">
+            <div class="aboutme-col">
+                <h3>Hobbies</h3>
+                <p>Outside of engineering, I enjoy staying active through calisthenics and hiking, while also pursuing creative outlets like 3D printing and papercraft design. I love building things both digitally and physically, often blending art with technology. I also enjoy cooperative video games and board games with friends, as well as experimenting with new recipes in the kitchen.</p>
+            </div>
+            <div class="aboutme-col">
+                <h3>Skills</h3>
+                <p>I bring a multidisciplinary engineering toolkit that spans software, robotics, electronics, and prototyping. On the programming side, I’m experienced in Python, C/C++, MATLAB, Verilog, and Git for version control. My machine learning and computer vision work leverages TensorFlow, PyTorch, OpenCV, and CNNs for applications such as object detection.
+
+In robotics, I focus on control and autonomy, including ROS, PID control, Kalman filtering, mechatronics integration, and pneumatic systems design. For modeling and simulation, I use SolidWorks, CATIA, Onshape, NX CAD, and COMSOL, with hands-on experience in UAV control systems.
+
+My electronics background covers KiCad design, circuit design, and signal processing, while my prototyping skill set includes FDM and SLA 3D printing, laser cutting, and welding. I’m fluent in both English and Mandarin, which helps me collaborate effectively across diverse teams.</p>
+            </div>
+            <div class="aboutme-col">
+                <h3>Education</h3>
+                <p>I earned a B.S. in Robotics Engineering with Honors and a minor in Electrical Engineering at the University of California, Santa Cruz, and recently completed my M.S. in Electrical & Computer Engineering with a focus on robotics and cyber-physical control systems. My academic training integrates robotics, control theory, and electronics, with coursework in robot kinematics and dynamics, feedback control, mechatronics, UAV systems, Kalman filtering, convex optimization, and system identification. My capstone and thesis research combined hands-on prototyping with advanced modeling and control design to develop practical, system-level solutions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Projects-->
+     <section class="LatestProjects">
+        <h1>Latest Projects</h1>
+        <p>A selection of recent work highlighting my experience in robotics, control systems, electronics, and prototyping.</p>
+        <div class="row">
+            <div class="latest-project-col">
+                <div class="thumb">
+                    <img src="Images/Robot.jpg" alt="">
+                    <div class="layer"><h3>Mechatronics Bot</h3></div>
+                </div>
+
+                <h3 class="card-title">Mechatronics Bot</h3>
+                <p>As part of my mechatronics course, I worked with a team to design and build an autonomous robot from scratch. Our bot used infrared sensors and motor feedback to navigate, make decisions, and interact with its environment. I took the lead on hardware bring-up and test fixture design, which helped us quickly troubleshoot issues and push the robot to consistent, competition-ready performance.</p>
+                </div>
+            <div class="latest-project-col">
+                <div class="thumb">
+                    <img src="Images/betrPCB1.png" alt="">
+                    <div class="layer"><h3>Multimodal Actuator PCB</h3></div>
+                </div>
+
+                <h3 class="card-title">Multimodal Actuator PCB</h3>
+                <p>I developed a custom PCB for a multimodal actuator system, built in KiCad and optimized for low-power operation. The board combines motor driver circuits, sensor front-ends, and Bluetooth Low Energy communication into a compact design. Careful attention was given to both performance and manufacturability, ensuring the system could be prototyped efficiently while meeting tight power constraints.</p>
+                </div>
+            <div class="latest-project-col">
+                <div class="thumb">
+                    <img src="Images/IRWandGame3.jpg" alt="">
+                    <div class="layer"><h3>IR Wand Game</h3></div>
+                </div>
+
+                <h3 class="card-title">IR Wand Game</h3>
+                <p>The IR Wand Game is an interactive system that blends the mechanics of rock–paper–scissors with the fast-paced feel of laser tag. I designed and programmed wands equipped with microcontrollers, IR transceivers, and Bluetooth communication, which connect to a laptop hub for score tracking and game logic. The project combined embedded programming, real-time communication, and hardware prototyping into a fun, multiplayer experience.</p>
+                </div>
+        </div>
+        <a href="projects.html" class="hero-btn">MORE PROJECTS</a>
+     </section>
+
+
+    <!-- Socials -->
+    <section id="contact" class="Socials">
+    <h1>Contact</h1>
+    <ul class="social-list">
+        <li><a class="social" href="mailto:hkjiangjiyuan7@gmail.com">
+        <i class="fa-solid fa-envelope"></i><span>Gmail</span></a></li>
+
+        <li><a class="social" href="https://www.linkedin.com/in/kevinjiangtech" target="_blank" rel="noopener">
+        <i class="fa-brands fa-linkedin"></i><span>LinkedIn</span></a></li>
+
+        <li><a class="social" href="https://github.com/TheUnknownAlias" target="_blank" rel="noopener">
+        <i class="fa-brands fa-github"></i><span>GitHub</span></a></li>
+
+        <li><a class="social" href="https://instagram.com/kkev.j" target="_blank" rel="noopener">
+        <i class="fa-brands fa-instagram"></i><span>kkev.j</span></a></li>
+    </ul>
+    </section>
+
+    <!------JavaScript for Toggle Menu------->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+    </script>
+
+</body>
+</html>

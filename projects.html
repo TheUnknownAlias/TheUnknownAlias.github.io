@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects · Kevin Jiang</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/all.min.css" />
+</head>
+<body>
+  <!-- NAV -->
+  <nav>
+    <a href="index.html"><img src="Images/logo.png" alt="Kevin Jiang" /></a>
+    <div class="nav-links" id="navLinks">
+      <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="projects.html" aria-current="page">PROJECTS</a></li>
+        <!-- <li><a href="misc.html">MISC</a></li> -->
+        <li><a href="index.html#contact">CONTACT</a></li>
+      </ul>
+    </div>
+    <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+  </nav>
+
+  <main class="projects">
+    <!-- FEATURED -->
+    <section class="featured">
+      <div class="featured__media">
+        <img src="Images/uav.png" alt="D.O.R.A. UAV Simulation" />
+      </div>
+      <div class="featured__body">
+        <span class="pill">Featured</span>
+        <h1 class="featured__title">D.O.R.A. — UAV Flight Sim</h1>
+        <p class="featured__lead">
+          Simulation of fixed-wing UAV flight dynamics with realistic wind models and advanced control systems for validation and testing.
+        </p>
+        <!-- <div class="featured__meta">
+          <span class="chip">Python</span>
+          <span class="chip">Controls</span>
+          <span class="chip">PyBullet</span>
+        </div> -->
+        <!-- <div class="featured__actions">
+          <a class="btn" href="#" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+          <a class="btn btn--ghost" href="#" target="_blank" rel="noopener"><i class="fa-solid fa-play"></i> Demo</a>
+        </div> -->
+      </div>
+    </section>
+
+    <!-- FILTERS -->
+    <section class="filters" aria-label="Project filters">
+      <button class="filter is-active" data-filter="all" aria-pressed="true">All</button>
+      <button class="filter" data-filter="controls" aria-pressed="false">Controls</button>
+      <button class="filter" data-filter="pcbs" aria-pressed="false">PCBs</button>
+      <button class="filter" data-filter="robotics" aria-pressed="false">Robotics</button>
+      <button class="filter" data-filter="bio" aria-pressed="false">Bioelectronics</button>
+    </section>
+
+    <!-- GRID -->
+    <section class="grid-projects">
+      <article class="card project" data-tags="robotics controls">
+        <div class="thumb">
+          <img src="Images/uav2.png" alt="" />
+          <div class="layer"><h3>UAV Sim</h3></div>
+        </div>
+        <h3 class="card-title">D.O.R.A. — UAV Flight Sim</h3>
+        <p>Simulation of fixed-wing UAV flight dynamics with realistic wind models and advanced control systems for validation and testing.</p>
+      </article>
+
+      <article class="card project" data-tags="bio pcbs">
+        <div class="thumb">
+          <img src="Images/betrPCB1.png" alt="" />
+          <div class="layer"><h3>Actuator PCB</h3></div>
+        </div>
+        <h3 class="card-title">Multimodal Actuator PCB</h3>
+        <p>Custom KiCad PCB integrating drivers, sensing front-ends, and BLE comms; optimized for mW-level power budget, and manufacturability.</p>
+
+        <!-- DROPDOWN GALLERY (button-based) -->
+        <div class="gallery">
+          <button class="gallery-toggle" type="button"
+                  aria-expanded="false" aria-controls="pcb-extra-1">
+            More images ▾
+          </button>
+          <div class="extra-images" id="pcb-extra-1" hidden>
+            <button class="lightbox-trigger" data-src="Images/betrPCB2.png">
+              <img src="Images/betrPCB2.png" alt="PCB view 1">
+            </button>
+            <button class="lightbox-trigger" data-src="Images/betrPCB3.png">
+              <img src="Images/betrPCB3.png" alt="PCB view 2">
+            </button>
+            <button class="lightbox-trigger" data-src="Images/Betrexample.png">
+              <img src="Images/Betrexample.png" alt="Prototype example">
+            </button>
+          </div>
+        </div>
+        <!-- (removed stray </details>) -->
+      </article>
+
+      <article class="card project" data-tags="controls robotics">
+        <div class="thumb">
+          <img src="Images/Robot.jpg" alt="" />
+          <div class="layer"><h3>Mechatronics Bot</h3></div>
+        </div>
+        <h3 class="card-title">Mechatronics Bot</h3>
+        <p>Autonomous mobile robot with closed-loop motor control, IR sensing stack, and custom test fixtures for rapid debugging and hardware bring-up.</p>
+        <a href="ECE_118_Final_Project_Report__Copy_.pdf" target="_blank" class="project-btn">Read Paper</a>
+      </article>
+
+      <article class="card project" data-tags="controls">
+        <div class="thumb">
+          <img src="Images/low_gripper.png" alt="" />
+          <div class="layer"><h3>Soft Finger</h3></div>
+        </div>
+        <h3 class="card-title">Soft Finger — ARMAX → PID</h3>
+        <p>System ID via discrete-time ARMAX (Ts=0.01 s) and controller synthesis; tuned PID achieved reduced rise time and overshoot in simulation of pneumatic actuator.</p>
+        <a href="University_of_California__Santa_Cruz_thesis_Kevin-1.pdf" target="_blank" class="project-btn">Read Paper</a>
+      </article>
+
+      <article class="card project" data-tags="robotics controls">
+        <div class="thumb">
+          <img src="Images/Arm.png" alt="" />
+          <div class="layer"><h3>Robot Arm Controller</h3></div>
+        </div>
+        <h3 class="card-title">Robot Arm Controller</h3>
+        <p>WeBots-based controller for 6-DOF arm; implements inverse kinematics and trajectory tracking of both position and end-effector orientation in workspace tasks.</p>
+
+        <!-- VIDEO TOGGLE -->
+        <button class="project-btn" onclick="toggleVideo(this)">▶ Watch Demo</button>
+        <video class="project-video" controls style="display:none; margin-top:10px; width:100%; max-height:560px; border-radius:8px;">
+          <source src="Images/RobotArmReferenceTracking.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </article>
+
+      <article class="card project" data-tags="robotics pcbs">
+        <div class="thumb">
+          <img src="Images/IRWandGame3.jpg" alt="" />
+          <div class="layer"><h3>IR Wand Game</h3></div>
+        </div>
+        <h3 class="card-title">IR Wand Game</h3>
+        <p>Interactive IR-based game blending rock–paper–scissors with laser tag; wands feature onboard microcontrollers, Bluetooth link to central laptop hub, and scoring logic.</p>
+        <a href="ECE167_finalProjectOfTheHonk.pdf" target="_blank" class="project-btn">Read Paper</a>
+      </article>
+    </section>
+  </main>
+
+  <!-- CONTACT -->
+  <section class="Socials" id="contact">
+    <h1>Contact</h1>
+    <ul class="social-list">
+      <li><a class="social" href="mailto:hkjiangjiyuan7@gmail.com"><i class="fa-solid fa-envelope"></i><span>Gmail</span></a></li>
+      <li><a class="social" href="https://www.linkedin.com/in/kevinjiangtech" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i><span>LinkedIn</span></a></li>
+      <li><a class="social" href="https://github.com/TheUnknownAlias" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i><span>GitHub</span></a></li>
+    </ul>
+  </section>
+
+  <!-- LIGHTBOX (one per page) -->
+  <div id="imgLightbox" class="overlay" role="dialog" aria-modal="true" aria-hidden="true">
+    <button class="close" aria-label="Close">&times;</button>
+    <img id="lightboxImg" alt="" />
+  </div>
+
+  <!-- SCRIPTS -->
+  <script>
+    // mobile drawer
+    const navLinks = document.getElementById("navLinks");
+    function showMenu(){ navLinks.style.right = "0"; }
+    function hideMenu(){ navLinks.style.right = "-200px"; }
+
+    // filters
+    const buttons = document.querySelectorAll('.filter');
+    const cards = document.querySelectorAll('.project');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => { b.classList.remove('is-active'); b.setAttribute('aria-pressed','false'); });
+        btn.classList.add('is-active'); btn.setAttribute('aria-pressed','true');
+        const f = btn.dataset.filter;
+        cards.forEach(c => { c.style.display = (f === 'all' || c.dataset.tags.includes(f)) ? '' : 'none'; });
+      });
+    });
+
+    // video toggle
+    function toggleVideo(btn) {
+      const video = btn.nextElementSibling;
+      if (video.style.display === "none") {
+        video.style.display = "block";
+        video.play();
+        btn.textContent = "⏸ Hide Demo";
+      } else {
+        video.pause();
+        video.style.display = "none";
+        btn.textContent = "▶ Watch Demo";
+      }
+    }
+
+    // gallery toggle (button → show/hide .extra-images)
+    document.addEventListener('click', (e) => {
+      const btn = e.target.closest('.gallery-toggle');
+      if (btn) {
+        const panelId = btn.getAttribute('aria-controls');
+        const panel = panelId ? document.getElementById(panelId) : btn.nextElementSibling;
+        if (panel && panel.classList.contains('extra-images')) {
+          const isOpen = !panel.hasAttribute('hidden');
+          if (isOpen) {
+            panel.setAttribute('hidden','');
+            btn.setAttribute('aria-expanded','false');
+            btn.textContent = 'More images ▾';
+          } else {
+            panel.removeAttribute('hidden');
+            btn.setAttribute('aria-expanded','true');
+            btn.textContent = 'Hide images ▴';
+          }
+        }
+        return; // don't fall through to lightbox close
+      }
+    });
+
+    // lightbox (works for thumbnails)
+    document.addEventListener('DOMContentLoaded', () => {
+      const overlay = document.getElementById('imgLightbox');
+      const img = document.getElementById('lightboxImg');
+
+      document.addEventListener('click', (e) => {
+        // OPEN: any .lightbox-trigger
+        const trigger = e.target.closest('.lightbox-trigger');
+        if (trigger) {
+          const src = trigger.dataset.src || trigger.querySelector('img')?.src;
+          if (src) {
+            img.src = src;
+            overlay.setAttribute('aria-hidden', 'false');
+          }
+          return;
+        }
+        // CLOSE: background or X button
+        if (e.target.id === 'imgLightbox' || e.target.closest('.close')) {
+          overlay.setAttribute('aria-hidden', 'true');
+          img.removeAttribute('src');
+        }
+      });
+
+      // ESC closes
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && overlay.getAttribute('aria-hidden') === 'false') {
+          overlay.setAttribute('aria-hidden', 'true');
+          img.removeAttribute('src');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
