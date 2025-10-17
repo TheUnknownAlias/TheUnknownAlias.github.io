@@ -100,7 +100,7 @@ nav img {
 }
 .text-box p{
     margin: 10px 0 40px;
-    font-size: 16px;
+    font-size: 20px;
     color: rgb(255, 255, 255);
 }
 
@@ -139,15 +139,15 @@ h1{
 }
 p{
     color:#517075;
-    font-size: 16px;
+    font-size: 17px;
     line-height: 22px;
-    padding: 10px;
+    padding: 12px;
 }
 li{
     color:#517075;
-    font-size: 16px;
+    font-size: 17px;
     line-height: 22px;
-    padding-top: 7px;
+    padding-top: 8px;
 }
 strong, summary{
   color:#156875;
@@ -170,6 +170,7 @@ strong, summary{
     overflow-wrap: anywhere;
 }
 h3{
+    font-size: 23px;
     text-align: center;
     font-weight: 600;
     margin: 10px 0;
@@ -759,6 +760,9 @@ h3{
     font-size: 28px;
     color: #fff;
   }
+  .text-box p{
+    font-size: 15px;
+  }
 
   /* Mobile nav drawer */
   .nav-links ul li{ display: block; }
@@ -797,6 +801,12 @@ h3{
     display: block;
     margin: auto;
     transition: width .5s;
+  }
+  p{
+    font-size: 14px;
+  }
+  li{
+    font-size: 14px;
   }
 }
 
