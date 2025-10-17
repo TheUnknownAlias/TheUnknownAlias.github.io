@@ -100,7 +100,7 @@ nav img {
 }
 .text-box p{
     margin: 10px 0 40px;
-    font-size: 20px;
+    font-size: 24px;
     color: rgb(255, 255, 255);
 }
 
@@ -139,13 +139,13 @@ h1{
 }
 p{
     color:#517075;
-    font-size: 17px;
+    font-size: 18px;
     line-height: 22px;
     padding: 12px;
 }
 li{
     color:#517075;
-    font-size: 17px;
+    font-size: 18px;
     line-height: 22px;
     padding-top: 8px;
 }
@@ -630,7 +630,7 @@ h3{
   margin: 0 0 18px;
   color: var(--muted);
   line-height: 1.55;
-  font-size: clamp(14px, 1.7vw, 18px);
+  font-size: clamp(15px, 1.7vw, 19px);
 }
 
 /* Buttons */
@@ -760,9 +760,6 @@ h3{
     font-size: 28px;
     color: #fff;
   }
-  .text-box p{
-    font-size: 15px;
-  }
 
   /* Mobile nav drawer */
   .nav-links ul li{ display: block; }
@@ -802,12 +799,6 @@ h3{
     margin: auto;
     transition: width .5s;
   }
-  p{
-    font-size: 14px;
-  }
-  li{
-    font-size: 14px;
-  }
 }
 
 /* ≤600px */
@@ -817,6 +808,15 @@ h3{
 
   /* Projects grid → 1 column */
   .grid-projects{ grid-template-columns: 1fr; }
+  p{
+    font-size: 14px;
+  }
+  li{
+    font-size: 14px;
+  }
+    .text-box p{
+    font-size: 15px;
+  }
 }
 
 /* ≤480px (extra-tight image grids) */
