@@ -137,11 +137,14 @@ h1{
     font-size: 36px;
     font-weight: 600;
 }
-p{
-    color:#777;
-    font-size: 300;
+p, li{
+    color:#517075;
+    font-size: 16px;
     line-height: 22px;
     padding: 10px;
+}
+strong, summary{
+  color:#156875;
 }
 
 .row{
@@ -500,10 +503,78 @@ h3{
 .card .card-list ul { margin: 0.25rem 0 0 0.9rem; }
 .card .card-list strong { font-weight: 600; }
 
-/* Optional: slightly tighter on small screens */
-@media (max-width: 700px) {
-  .card .card-list { font-size: 0.92rem; }
+
+.btn-row{
+  margin-bottom: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;   /* hug left */
+  align-items: flex-end;         /* align to bottom of the container */
+  gap: .5rem;                    /* nice spacing between buttons */
+  padding-bottom: .5rem;         /* visible space from the bottom */
 }
+/* Make <a.project-btn> and <button.gallery-toggle> look identical */
+.project-btn,
+.gallery .gallery-toggle {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  /* size */
+  height: 44px;          /* same height */
+  padding: 0 18px;       /* inner spacing */
+  min-width: 180px;      /* optional: same width; tweak or remove */
+
+  /* typography */
+  font: 600 16px/1 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  white-space: nowrap;
+
+  /* visuals (match your theme) */
+  border: 1px solid #227887;   /* same border thickness/color */
+  border-radius: 12px;
+  background: #e8f4f6;
+  color: #226f7d;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* remove native button quirks so it matches the link */
+.gallery .gallery-toggle {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #e8f4f6;
+  border: 1px solid #227887;
+}
+
+/* optional hover/focus for both */
+.project-btn:hover,
+.gallery .gallery-toggle:hover {
+  filter: brightness(0.97);
+}
+.project-btn:focus-visible,
+.gallery .gallery-toggle:focus-visible {
+  outline: 3px solid rgba(34,120,135,.35);
+  outline-offset: 2px;
+}
+
+/* Smaller, still matching each other */
+.card.project .project-btn,
+.card.project .gallery .gallery-toggle {
+  height: 36px;          /* was 44px */
+  padding: 0 14px;       /* was 0 18px */
+  min-width: 150px;      /* tweak or set to auto if you don't want equal widths */
+  font-weight: 600;
+  font-size: 15px;       /* was 16px */
+  border-radius: 10px;   /* slightly tighter corners */
+}
+
+.btn-row {
+  gap: .4rem;
+  padding-bottom: .4rem;
+}
+
+
 
 
 
@@ -520,6 +591,26 @@ h3{
   border-radius: 16px;
   display: block;
 }
+/* The card's media box: consistent shape */
+.stuff__media{
+  aspect-ratio: 4 / 3;          /* pick the shape you want for all tiles */
+  border-radius: 16px;
+  overflow: hidden;              /* crop anything that spills */
+  background: #eef7f6;           /* nice fallback while loading */
+}
+
+/* The image: fill the box without distortion */
+.stuff__media img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;             /* fill + crop (no letterboxing) */
+  object-position: center;       /* tweak per image if needed */
+}
+
+/* If a specific photo should show more top, add a helper class */
+.stuff__media img.is-top { object-position: center top; }
+
 
 /* Text */
 .intro__body h2{

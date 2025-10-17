@@ -134,7 +134,7 @@
     </div>
     <h3 class="card-title">Multimodal Actuator PCB</h3>
     <p>Custom KiCad PCB integrating drivers, sensing front-ends, and BLE comms; optimized for mW-level power budget, and manufacturability.</p>
-
+    <div class="btn-row">
     <!-- DROPDOWN GALLERY -->
     <div class="gallery">
       <button class="gallery-toggle" type="button"
@@ -152,6 +152,7 @@
           <img src="Images/Betrexample.png" alt="Prototype example">
         </button>
       </div>
+    </div>
     </div>
 
     <details class="card-details">
@@ -194,8 +195,9 @@
     </div>
     <h3 class="card-title">Mechatronics Bot</h3>
     <p>Autonomous mobile robot with closed-loop motor control, IR sensing stack, and custom test fixtures for rapid debugging and hardware bring-up.</p>
+    <div class="btn-row">
     <a href="ECE_118_Final_Project_Report__Copy_.pdf" target="_blank" class="project-btn">Read Paper</a>
-
+    </div>
     <details class="card-details">
       <summary>Project details</summary>
       <ul class="card-list">
@@ -233,8 +235,9 @@
     </div>
     <h3 class="card-title">Soft Finger — ARMAX → PID</h3>
     <p>Identified the dynamic behavior of a pneumatic soft actuator through discrete-time ARMAX modeling (Ts = 0.01 s) and designed a tuned PID controller that reduced rise time and overshoot in closed-loop simulation.</p>
+    <div class="btn-row">
     <a href="University_of_California__Santa_Cruz_thesis_Kevin-1.pdf" target="_blank" class="project-btn">Read Paper</a>
-
+    </div>
     <details class="card-details">
       <summary>Project details</summary>
       <ul class="card-list">
@@ -273,14 +276,14 @@
     </div>
     <h3 class="card-title">Robot Arm Controller</h3>
     <p>Developed a Webots-based controller for a 6-DOF robotic arm implementing inverse kinematics, trajectory planning, and smooth orientation tracking for workspace manipulation tasks.</p>
-
+    <div class="btn-row">
     <!-- VIDEO TOGGLE -->
     <button class="project-btn" onclick="toggleVideo(this)">▶ Watch Demo</button>
     <video class="project-video" controls style="display:none; margin-top:10px; width:100%; max-height:560px; border-radius:8px;">
       <source src="Images/RobotArmReferenceTracking.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
-
+    </div>
     <details class="card-details">
       <summary>Project details</summary>
       <ul class="card-list">
@@ -312,13 +315,34 @@
 
   <!-- IR WAND GAME -->
   <article class="card project" data-tags="robotics pcbs">
+
+
     <div class="thumb">
       <img src="Images/IRWandGame3.jpg" alt="" />
       <div class="layer"><h3>IR Wand Game</h3></div>
     </div>
     <h3 class="card-title">IR Wand Game</h3>
     <p>Interactive IR-based game blending rock–paper–scissors with laser tag; wands feature onboard microcontrollers, Bluetooth link to central laptop hub, and scoring logic.</p>
+
+    <div class="btn-row">
     <a href="ECE167_finalProjectOfTheHonk.pdf" target="_blank" class="project-btn">Read Paper</a>
+
+            <!-- DROPDOWN GALLERY -->
+      <div class="gallery">
+        <button class="gallery-toggle" type="button"
+                aria-expanded="false" aria-controls="IRwand">
+          More images ▾
+        </button>
+        <div class="extra-images" id="IRwand" hidden>
+          <button class="lightbox-trigger" data-src="Images/IRWandGame2.png">
+            <img src="Images/IRWandGame2.png" alt="IRwand1">
+          </button>
+          <button class="lightbox-trigger" data-src="Images/IRWandGame.jpg">
+            <img src="Images/IRWandGame.jpg" alt="IRwand2">
+          </button>
+        </div>
+      </div>
+    </div>
 
     <details class="card-details">
       <summary>Project details</summary>
