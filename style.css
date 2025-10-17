@@ -458,6 +458,55 @@ h3{
   cursor: pointer;
 }
 
+.featured__list {
+  margin: 0.75rem 0 0;   /* space above list */
+  padding-left: 1.25rem; /* indent bullets */
+  line-height: 1.4;
+}
+.featured__list > li { margin: 0.35rem 0; }
+.featured__list ul { margin: 0.35rem 0 0.25rem 1rem; }
+.featured__list strong { font-weight: 600; }
+
+/* Card details styling */
+.card .card-details {
+  margin-top: 0.5rem;
+}
+.card .card-details summary {
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;          /* hide default marker for a cleaner look */
+  position: relative;
+  padding-left: 1.1rem;      /* space for custom caret */
+}
+.card .card-details summary::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateY(1px);
+}
+.card .card-details[open] summary::before {
+  content: "▾";
+}
+.card .card-list {
+  margin: 0.5rem 0 0;
+  padding-left: 1.1rem;
+  line-height: 1.45;
+  font-size: 0.95rem;
+  border-left: 2px solid rgba(0,0,0,0.08);
+  padding-left: 0.9rem;
+}
+.card .card-list > li { margin: 0.35rem 0; }
+.card .card-list ul { margin: 0.25rem 0 0 0.9rem; }
+.card .card-list strong { font-weight: 600; }
+
+/* Optional: slightly tighter on small screens */
+@media (max-width: 700px) {
+  .card .card-list { font-size: 0.92rem; }
+}
+
+
+
 
 
 
