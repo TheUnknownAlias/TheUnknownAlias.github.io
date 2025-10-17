@@ -137,10 +137,17 @@ h1{
     font-size: 36px;
     font-weight: 600;
 }
-p, li{
+p{
     color:#517075;
     font-size: 16px;
     line-height: 22px;
+    padding: 10px;
+}
+li{
+    color:#517075;
+    font-size: 16px;
+    line-height: 22px;
+    padding-top: 7px;
 }
 strong, summary{
   color:#156875;
